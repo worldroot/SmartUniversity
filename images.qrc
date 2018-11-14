@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/">
+        <file>bouton.png</file>
+        <file>bouton_pressed.png</file>
+        <file>top.png</file>
+        <file>background.png</file>
+        <file>background_restau.png</file>
+        <file>ADD_restaurant.png</file>
+        <file>ADD_restaurant2.png</file>
+        <file>create_restaurant_v1.png</file>
+        <file>ADD_Students.png</file>
+        <file>ADD_Students2.png</file>
+        <file>add_students_background.png</file>
+        <file>ADD_types_subcription.png</file>
+        <file>ADD_types_subscription2.png</file>
+        <file>add_types_subscriptions_background.png</file>
+        <file>background_apllication.png</file>
+        <file>background_moduul_restau.png</file>
+        <file>stylesheet.qss</file>
+        <file>menu_subscriptions.png</file>
+        <file>menu_menus.png</file>
+        <file>ajouter_menu_formulaire.png</file>
+        <file>formulaire_terminer.png</file>
+        <file>menu_add_remove.png</file>
+        <file>motion_center.png</file>
+        <file>CentreN.png</file>
+        <file>supprimer_menu_formulaire.png</file>
+    </qresource>
+</RCC>

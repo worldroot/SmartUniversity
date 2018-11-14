@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>880</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1187</width>
+    <height>846</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>880</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image:url(:background_moduul_restau.png);
+background-repeat: no-repeat;
+background-position: center bottom;
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>40</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>connexion</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Sub">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>140</y>
+      <width>271</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#Sub{
+background:none;
+border: transparent;
+border-radius: 20px;
+position: relative;
+		}
+
+#Sub:hover{
+		background: rgba(204, 204, 204, 0.2);
+		opacity:0.1;
+			}
+
+
+#Sub::Pressed{
+
+		background: rgba(211,84,0,0.4);
+}
+
+#Sub::visited{
+background: rgba(211,84,0,0.5);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Restaurants">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>200</y>
+      <width>271</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#Restaurants{
+background:none;
+border: transparent;
+border-radius: 20px;
+position: relative;
+		}
+#Restaurants:hover{
+		background: rgba(204, 204, 204, 0.2);
+		opacity:0.1;
+			}
+
+#Restaurants::pressed{
+background: rgba(211,84,0,0.5);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Menu">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>250</y>
+      <width>271</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#Menu{
+background:none;
+border: transparent;
+border-radius: 20px;
+position: relative;
+		}
+#Menu:hover{
+		background: rgba(204, 204, 204, 0.2);
+		opacity:0.1;
+			}
+
+
+#Menu::pressed{
+background: rgba(211,84,0,0.5);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Sensors">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>271</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#Sensors{
+background:none;
+border: transparent;
+border-radius: 20px;
+position: relative;
+		}
+#Sensors:hover{
+		background: rgba(204, 204, 204, 0.2);
+		opacity:0.1;
+			}
+
+#Sensors::pressed{
+background: rgba(211,84,0,0.5);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Notifications">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>380</y>
+      <width>271</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#Notifications{
+background:none;
+border: transparent;
+border-radius: 20px;
+position: relative;
+		}
+#Notifications:hover{
+		background: rgba(204, 204, 204, 0.2);
+		opacity:0.1;
+			}
+
+
+#Sensors::pressed{
+background: rgba(211,84,0,0.5);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="mini_menu">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>90</y>
+      <width>941</width>
+      <height>801</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#mini_menu{
+background:none;
+border: transparent;
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="page_subscriptions">
+     <property name="styleSheet">
+      <string notr="true">#page_subscriptions {
+background-image: transparent;
+
+border: transparent;
+
+}</string>
+     </property>
+     <widget class="QPushButton" name="Add_types">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>40</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#Add_types{
+background:none;
+border:transparent;
+background-repeat:none;
+padding-top: 0px;
+margin-top:0px;
+
+}
+
+#Add_types:hover{
+background: rgba(204, 204, 204, 0.2);
+
+}
+
+#Add_types::pressed{
+border-image:url(:);
+}
+
+         
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Active_types">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>40</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#Active_types{
+background:none;
+border:transparent;
+background-repeat:none;
+padding-top: 0px;
+margin-top:0px;
+
+}
+
+#Active_types:hover{
+background: rgba(204, 204, 204, 0.2);
+
+}
+
+#Active_types::pressed{
+border-image:url(:);
+}
+
+         
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Refresh_subscriptions">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>40</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#Refresh_subscriptions{
+background:none;
+border:transparent;
+background-repeat:none;
+padding-top: 0px;
+margin-top:0px;
+
+}
+
+#Refresh_subscriptions:hover{
+background: rgba(204, 204, 204, 0.2);
+
+}
+
+#Refresh_subscriptions::pressed{
+border-image:url(:);
+}
+
+         
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QFrame" name="Background_subscriptions">
+      <property name="geometry">
+       <rect>
+        <x>-40</x>
+        <y>-190</y>
+        <width>891</width>
+        <height>801</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:menu_add_remove.png);
+border: transparent;
+</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2"/>
+     </widget>
+     <widget class="QPushButton" name="Remove_Subscriptions">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>40</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#Remove_Subscriptions{
+background:none;
+border:transparent;
+background-repeat:none;
+padding-top: 0px;
+margin-top:0px;
+
+}
+
+#Remove_Subscriptions:hover{
+background: rgba(204, 204, 204, 0.2);
+
+}
+
+#Refresh_subscriptions::pressed{
+border-image:url(:);
+}
+
+         
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>Background_subscriptions</zorder>
+     <zorder>Active_types</zorder>
+     <zorder>Add_types</zorder>
+     <zorder>Refresh_subscriptions</zorder>
+     <zorder>Remove_Subscriptions</zorder>
+    </widget>
+    <widget class="QWidget" name="page_restaurants">
+     <property name="styleSheet">
+      <string notr="true">#page_restaurants {
+background-image: transaparent;
+
+border: transparent;
+
+}</string>
+     </property>
+     <widget class="QPushButton" name="Add_Restau">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>30</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#Add_Restau{
+background:none;
+border:transparent;
+background-repeat:none;
+padding-top: 0px;
+margin-top:0px;
+
+}
+
+#Add_Restau:hover{
+background: rgba(204, 204, 204, 0.2);
+
+}
+
+#Add_Restau::pressed{
+border-image:url(:);
+}
+
+         
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Remove_Restau">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>30</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#Remove_Restau{
+background:none;
+border:transparent;
+background-repeat:none;
+padding-top: 0px;
+margin-top:0px;
+
+}
+
+#Remove_Restau:hover{
+background: rgba(204, 204, 204, 0.2);
+
+}
+
+#Remove_Restau::pressed{
+border-image:url(:);
+}
+
+         
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Refresh_Restau">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>30</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#Refresh_Restau{
+background:none;
+border:transparent;
+background-repeat:none;
+padding-top: 0px;
+margin-top:0px;
+
+}
+
+#Refresh_Restau:hover{
+background: rgba(204, 204, 204, 0.2);
+
+}
+
+#Refresh_Restau::pressed{
+border-image:url(:);
+}
+
+         
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QFrame" name="Background_restaurants">
+      <property name="geometry">
+       <rect>
+        <x>-40</x>
+        <y>-190</y>
+        <width>891</width>
+        <height>801</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:menu_add_remove.png);
+border: transparent;
+</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3"/>
+     </widget>
+     <zorder>Background_restaurants</zorder>
+     <zorder>Add_Restau</zorder>
+     <zorder>Remove_Restau</zorder>
+     <zorder>Refresh_Restau</zorder>
+    </widget>
+    <widget class="QWidget" name="page_menu">
+     <property name="styleSheet">
+      <string notr="true">#page_menu {
+background-image:transparent;
+
+border: transparent;
+
+}</string>
+     </property>
+     <widget class="QPushButton" name="Add_menus">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>40</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#Add_menus{
+background:none;
+border:transparent;
+background-repeat:none;
+padding-top: 0px;
+margin-top:0px;
+
+}
+
+#Add_menus:hover{
+background: rgba(204, 204, 204, 0.2);
+
+}
+
+#Add_menus::pressed{
+border-image:url(:);
+}
+
+         
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Remove_menus">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>30</y>
+        <width>181</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#Remove_menus{
+background:none;
+border:transparent;
+background-repeat:none;
+padding-top: 0px;
+margin-top:0px;
+
+}
+
+#Remove_menus:hover{
+background: rgba(204, 204, 204, 0.2);
+
+}
+
+#Remove_menus::pressed{
+border-image:url(:);
+}
+
+         
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QFrame" name="Background_subscriptions_2">
+      <property name="geometry">
+       <rect>
+        <x>-40</x>
+        <y>-190</y>
+        <width>891</width>
+        <height>801</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:menu_add_remove.png);
+border: transparent;
+</string>
+      </property>
+      <widget class="QTableView" name="table">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>310</y>
+         <width>741</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:transparent;
+border:transparent;</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Refresh_menus">
+       <property name="geometry">
+        <rect>
+         <x>620</x>
+         <y>230</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#Refresh_menus{
+background:none;
+border:transparent;
+background-repeat:none;
+padding-top: 0px;
+margin-top:0px;
+
+}
+
+#Refresh_menus:hover{
+background: rgba(204, 204, 204, 0.2);
+
+}
+
+#Add_menus::pressed{
+border-image:url(:);
+}
+
+         
+
+
+
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+     <zorder>Background_subscriptions_2</zorder>
+     <zorder>Add_menus</zorder>
+     <zorder>Remove_menus</zorder>
+    </widget>
+    <widget class="QWidget" name="page_sensors">
+     <property name="styleSheet">
+      <string notr="true">#page_sensors {
+background:none;
+
+border: transparent;
+
+}</string>
+     </property>
+     <widget class="QFrame" name="verticalFrame">
+      <property name="geometry">
+       <rect>
+        <x>-70</x>
+        <y>-10</y>
+        <width>1021</width>
+        <height>831</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:url(:/CentreN.png);
+background-repeat:none;</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout"/>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_notifications">
+     <property name="styleSheet">
+      <string notr="true">#page_notifications {
+background: none;
+
+border: transparent;
+
+}</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
