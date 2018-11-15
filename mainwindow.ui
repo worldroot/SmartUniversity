@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>880</height>
+    <width>1187</width>
+    <height>846</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -18,8 +18,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>1200</width>
-    <height>880</height>
+    <width>1187</width>
+    <height>846</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -37,7 +37,7 @@ background-position: center bottom;
     <property name="geometry">
      <rect>
       <x>1060</x>
-      <y>40</y>
+      <y>10</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -50,7 +50,7 @@ background-position: center bottom;
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>140</y>
+      <y>110</y>
       <width>271</width>
       <height>51</height>
      </rect>
@@ -86,7 +86,7 @@ background: rgba(211,84,0,0.5);
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>200</y>
+      <y>160</y>
       <width>271</width>
       <height>51</height>
      </rect>
@@ -114,8 +114,8 @@ background: rgba(211,84,0,0.5);
    <widget class="QPushButton" name="Menu">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>250</y>
+      <x>0</x>
+      <y>220</y>
       <width>271</width>
       <height>51</height>
      </rect>
@@ -144,8 +144,8 @@ background: rgba(211,84,0,0.5);
    <widget class="QPushButton" name="Sensors">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>320</y>
+      <x>0</x>
+      <y>280</y>
       <width>271</width>
       <height>51</height>
      </rect>
@@ -173,8 +173,8 @@ background: rgba(211,84,0,0.5);
    <widget class="QPushButton" name="Notifications">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>380</y>
+      <x>0</x>
+      <y>340</y>
       <width>271</width>
       <height>51</height>
      </rect>
@@ -203,16 +203,17 @@ background: rgba(211,84,0,0.5);
    <widget class="QStackedWidget" name="mini_menu">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>90</y>
+      <x>270</x>
+      <y>50</y>
       <width>941</width>
-      <height>801</height>
+      <height>761</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">#mini_menu{
 background:none;
 border: transparent;
+background-repeat:none;
 }</string>
     </property>
     <property name="currentIndex">
@@ -694,6 +695,108 @@ border-image:url(:);
        </property>
        <property name="text">
         <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>460</x>
+         <y>650</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>NOM</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>406</x>
+         <y>690</y>
+         <width>81</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>DESCRIPTION</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
+       <property name="geometry">
+        <rect>
+         <x>440</x>
+         <y>740</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Update_menu">
+       <property name="geometry">
+        <rect>
+         <x>700</x>
+         <y>670</y>
+         <width>151</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#Update_menu{
+background:none;
+border:transparent;
+background-repeat:none;
+padding-top: 0px;
+margin-top:0px;
+
+}
+
+#Update_menu:hover{
+background: rgba(204, 204, 204, 0.2);
+
+}
+
+#Update_menu::pressed{
+border-image:url(:);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>UPDATE</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="txt_nom1">
+       <property name="geometry">
+        <rect>
+         <x>512</x>
+         <y>650</y>
+         <width>191</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="txt_description">
+       <property name="geometry">
+        <rect>
+         <x>500</x>
+         <y>690</y>
+         <width>191</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="txt_id">
+       <property name="geometry">
+        <rect>
+         <x>510</x>
+         <y>730</y>
+         <width>191</width>
+         <height>21</height>
+        </rect>
        </property>
       </widget>
      </widget>

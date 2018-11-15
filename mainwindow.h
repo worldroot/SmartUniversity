@@ -44,6 +44,10 @@ private slots:
 
     void on_Remove_menus_clicked();
 
+    void on_table_activated(const QModelIndex &index);
+
+    void on_Update_menu_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlTableModel *model;

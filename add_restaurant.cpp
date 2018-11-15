@@ -10,7 +10,7 @@ Add_restaurant::Add_restaurant(QWidget *parent) :
 
 Add_restaurant::~Add_restaurant()
 {
-    delete ui;
+    delete ui;  
 }
 
 void Add_restaurant::on_Cancel_clicked()
