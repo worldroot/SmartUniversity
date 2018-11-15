@@ -130,3 +130,43 @@ void MainWindow::on_Remove_menus_clicked()
  suppr_restau.setModal(true);
  suppr_restau.exec();
 }
+
+void MainWindow::on_table_activated(const QModelIndex &index)
+{
+
+
+    QString val = ui->table->model()->data(index).toString();
+    QSqlQuery qry;
+    qry.prepare("select * from menus where NOM='"+val+"' or DESCRIPTION='"+val+"' or ID='"+val+"'    ");
+    if(qry.exec())
+    {
+        while(qry.next())
+        {
+                ui->txt_nom1->setText(qry.value(0).toString());
+                ui->txt_description->setText(qry.value(1).toString());
+                ui->txt_id->setText(qry.value(2).toString());
+        }
+    }
+
+}
+
+void MainWindow::on_Update_menu_clicked()
+{
+    QString nom,description,id;
+    nom = ui->txt_nom1->text();
+    description = ui->txt_description->text();
+    id = ui->txt_id->text();
+
+
+    Menu m;
+    m.modifier_Menu(nom,description,id);
+   // QSqlQuery qry;
+   //qry.prepare("update menus set NOM='"+nom+"',DESCRIPTION='"+description+"',ID='"+id+"' where id='"+id+"' ");
+    if(m.modifier_Menu(nom,description,id))
+      {
+        QMessageBox::information(nullptr, QObject::tr(" menu mis a jour"),
+                        QObject::tr("Menu mis a jour.\n"));
+      }
+   #
+
+}

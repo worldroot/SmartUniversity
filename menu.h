@@ -18,7 +18,7 @@ public:
     QSqlQueryModel * afficher();
     bool supprimer_Menu(int id_supprimer);
     void afficher_Menu(int id);
-    void modifier_Menu(int id);
+    bool modifier_Menu(QString,QString,QString);
     int get_id();
     QString get_nom();
     QString get_description();

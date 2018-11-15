@@ -55,3 +55,14 @@ bool Menu::supprimer_Menu(int id_supprimer)
     query.bindValue(":id", res);
     return    query.exec();
 }
+
+bool Menu::modifier_Menu(QString a,QString b,QString c)
+{
+    QSqlQuery qry;
+    qry.prepare("update menus set NOM= :nom,DESCRIPTION= :description,ID= :id where id= :id ");
+    qry.bindValue(":id",c );
+    qry.bindValue(":nom",a );
+    qry.bindValue(":description",b );
+   return qry.exec();
+
+}
