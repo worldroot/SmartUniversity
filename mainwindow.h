@@ -5,6 +5,8 @@
 #include <QGraphicsOpacityEffect>
 #include <QSqlTableModel>
 #include "menu.h"
+#include "Smtp.h"
+#include "restaurant.h"
 
 namespace Ui {
 class MainWindow;
@@ -48,10 +50,16 @@ private slots:
 
     void on_Update_menu_clicked();
 
+    void on_SendMail_clicked();
+    void mailSent(QString);
+    void on_Remove_Restau_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlTableModel *model;
+    QSqlTableModel *model1;
     Menu tempmenu;
+    Restaurant temprestau;
 
 };
 

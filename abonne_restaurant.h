@@ -1,6 +1,9 @@
 #ifndef ABONNE_RESTAURANT_H
 #define ABONNE_RESTAURANT_H
 #include<QDate>
+#include <QString>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
 
 class Abonne_Restaurant
 {
@@ -8,11 +11,14 @@ private:
     int id;
     QDate debut;
     QDate fin;
-    int type;
+    QString type;
+    int id_resto;
+    int id_etudiant;
+
 public:
     Abonne_Restaurant();
-    Abonne_Restaurant(int,QDate,QDate);
-    void ajouter_Abonne_Restaurant();
+    Abonne_Restaurant(int,QDate,QDate,QString,int,int);
+    bool ajouter_Abonne_Restaurant();
     void afficher_Abonne_Restaurant();
     void modifier_Abonne_Restaurant();
     void supprimer_Abonne_Restaurant();

@@ -18,6 +18,10 @@ public:
 private slots:
     void on_Cancel_clicked();
 
+    void on_Restau_selection_currentIndexChanged(const QString &arg1);
+
+    void on_send_clicked();
+
 private:
     Ui::add_students *ui;
 };

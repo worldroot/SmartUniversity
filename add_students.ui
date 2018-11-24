@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1178</width>
-    <height>757</height>
+    <width>817</width>
+    <height>580</height>
    </rect>
   </property>
   <property name="maximumSize">
@@ -20,7 +20,9 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background:url(:add_students_background.png);</string>
+   <string notr="true">
+background-image:url(:create_subscriptions.png);
+background-repeat:none;</string>
   </property>
   <widget class="QPushButton" name="Cancel">
    <property name="geometry">
@@ -49,75 +51,15 @@ background:rgba(192, 57, 43, 0.2);
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="Name">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>360</y>
-     <width>41</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#Name{
-background: transparent;
-border-radius: 20px;
-color: rgba(212, 214, 215, 1);
-}</string>
-   </property>
-   <property name="text">
-    <string>Name</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Restaurant">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>430</y>
-     <width>71</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#Restaurant{
-background: transparent;
-border-radius: 20px;
-color: rgba(212, 214, 215, 1);
-}</string>
-   </property>
-   <property name="text">
-    <string>Restaurant</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="Types">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>500</y>
-     <width>41</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#Types{
-background: transparent;
-border-radius: 20px;
-color: rgba(212, 214, 215, 1);
-}</string>
-   </property>
-   <property name="text">
-    <string>Types</string>
-   </property>
-  </widget>
   <widget class="QComboBox" name="Restau_selection">
    <property name="enabled">
     <bool>true</bool>
    </property>
    <property name="geometry">
     <rect>
-     <x>458</x>
-     <y>453</y>
-     <width>291</width>
+     <x>240</x>
+     <y>440</y>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
@@ -194,9 +136,9 @@ QComboBox QAbstractItemView {
   <widget class="QComboBox" name="Types_selection">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>520</y>
-     <width>291</width>
+     <x>230</x>
+     <y>240</y>
+     <width>121</width>
      <height>31</height>
     </rect>
    </property>
@@ -268,26 +210,174 @@ QComboBox QAbstractItemView {
     </property>
    </item>
   </widget>
-  <widget class="QLineEdit" name="Name_text">
+  <widget class="QPushButton" name="send">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>390</y>
-     <width>281</width>
+     <x>240</x>
+     <y>500</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#send{
+border: transparent;
+border-radius: 20px;
+background: transparent;
+
+}
+
+#send:hover{
+background:rgba(46, 204, 113, 0.2);
+
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Etudiant_selection">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>440</y>
+     <width>111</width>
      <height>31</height>
     </rect>
    </property>
-   <property name="autoFillBackground">
+   <property name="styleSheet">
+    <string notr="true">#Etudiant_selection{
+border: 1px ;
+border-radius: 20px;
+color:dark;
+
+}
+QComboBox:editable{
+background:  rgba(249, 249, 249, 0.35);
+border:  transparent;
+
+}
+
+QComboBox:!editable, QComboBox::drop-down:editable {
+     background: rgba(249, 249, 249, 0.35);
+}
+
+/* QComboBox gets the &quot;on&quot; state when the popup is open */
+QComboBox:!editable:on, QComboBox::drop-down:editable:on {
+    background: rgba(249, 249, 249, 0.35);
+}
+QComboBox:on { /* shift the text when the popup opens */
+    padding-top: 3px;
+    padding-left: 4px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+QComboBox::down-arrow:on { /* shift the arrow when popup is open */
+    top: 1px;
+    left: 1px;
+}
+
+QComboBox QAbstractItemView {
+    border: 2px solid darkgray;
+    selection-background-color: lightgray;
+}
+
+
+</string>
+   </property>
+   <property name="editable">
     <bool>false</bool>
+   </property>
+   <property name="currentText">
+    <string>Restau1</string>
+   </property>
+   <property name="duplicatesEnabled">
+    <bool>false</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>Restau1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Restau2</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="cancel">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>500</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:&quot;dark&quot;;</string>
+    <string notr="true">#cancel{
+border: transparent;
+border-radius: 20px;
+background: transparent;
+
+}
+
+#cancel:hover{
+background:rgba(46, 204, 113, 0.2);
+
+}</string>
    </property>
-   <property name="inputMethodHints">
-    <set>Qt::ImhNone</set>
+   <property name="text">
+    <string/>
    </property>
-   <property name="clearButtonEnabled">
-    <bool>false</bool>
+  </widget>
+  <widget class="QDateEdit" name="dateEdit">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>310</y>
+     <width>281</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QDateEdit" name="dateEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>380</y>
+     <width>281</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_id">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>240</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: #f9f9f9;
+border-radius: 10px;
+color:&quot;dark&quot;
+</string>
    </property>
   </widget>
  </widget>

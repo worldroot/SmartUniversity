@@ -25,5 +25,9 @@
         <file>motion_center.png</file>
         <file>CentreN.png</file>
         <file>supprimer_menu_formulaire.png</file>
+        <file>create_restaurant_v3.png</file>
+        <file>create_restauant_v4.png</file>
+        <file>delete_restaurant_v2.png</file>
+        <file>create_subscriptions.png</file>
     </qresource>
 </RCC>

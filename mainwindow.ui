@@ -217,7 +217,7 @@ background-repeat:none;
 }</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page_subscriptions">
      <property name="styleSheet">
@@ -839,6 +839,19 @@ border: transparent;
 }</string>
      </property>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="SendMail">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>10</y>
+      <width>80</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>MAIL</string>
+    </property>
    </widget>
   </widget>
  </widget>

@@ -19,6 +19,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "formulaire_supprimer_menu.h"
+#include "Smtp.h"
+#include "delete_restaurant.h"
+
 #define q2c(string) string.toStdString()
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -169,4 +172,27 @@ void MainWindow::on_Update_menu_clicked()
       }
    #
 
+}
+
+
+
+void MainWindow::on_SendMail_clicked()
+{
+    Smtp* smtp = new Smtp("mehdi.behira@esprit.tn", "esprit2017", "smtp.gmail.com",465);
+     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+     smtp->sendMail("mehdi.behira@esprit.tn", "mehdibehira@gmail.com" , "This is a subject","This is a body");
+}
+
+
+void MainWindow::mailSent(QString status)
+{
+    if(status == "Message sent")
+        QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+}
+
+void MainWindow::on_Remove_Restau_clicked()
+{   delete_restaurant delete_restau;
+   delete_restau.setModal(true);
+    delete_restau.exec();
 }

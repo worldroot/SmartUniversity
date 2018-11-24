@@ -1,6 +1,7 @@
 #ifndef RESTAURANT_H
 #define RESTAURANT_H
-
+#include <QSqlQuery>
+#include <QSqlQueryModel>
 
 class Restaurant
 {
@@ -8,14 +9,16 @@ private:
     int id;
     int nb_places;
     int nb_employes;
-    int nb_capteurs;
+    int id_menu;
+
 public:
     Restaurant();
     Restaurant(int,int,int,int);
-    void ajouter_Restaurant(Restaurant);
-    void supprimer_Restaurant(int id);
+    bool ajouter_Restaurant();
+    bool supprimer_Restaurant(int id_supprimer);
     void modifier_Restaurant(int id);
     void consulter_Restaurant(int id);
+    QSqlQueryModel * afficher();
     int get_id();
     int get_nb_places();
     int get_nb_employes();

@@ -18,6 +18,10 @@ public:
 private slots:
     void on_Cancel_clicked();
 
+    void on_send_clicked();
+
+    void on_cancel_clicked();
+
 private:
     Ui::Add_restaurant *ui;
 };
