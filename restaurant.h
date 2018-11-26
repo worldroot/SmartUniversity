@@ -19,6 +19,7 @@ public:
     void modifier_Restaurant(int id);
     void consulter_Restaurant(int id);
     QSqlQueryModel * afficher();
+    QSqlQueryModel * chercher(QString,QString);
     int get_id();
     int get_nb_places();
     int get_nb_employes();

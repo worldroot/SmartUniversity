@@ -21,6 +21,7 @@
 #include "formulaire_supprimer_menu.h"
 #include "Smtp.h"
 #include "delete_restaurant.h"
+#include "restaurant.h"
 
 #define q2c(string) string.toStdString()
 
@@ -28,8 +29,11 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    Restaurant r;
     ui->setupUi(this);
     ui->table->setModel(tempmenu.afficher());
+
+
 }
 
 MainWindow::~MainWindow()
@@ -77,11 +81,13 @@ void MainWindow::on_Sub_clicked()
 {
 
     ui->mini_menu->setCurrentIndex(0);
+    ui->tableView_2->setModel(tempabo.afficher());
 }
 
 void MainWindow::on_Restaurants_clicked()
 {
     ui->mini_menu->setCurrentIndex(1);
+     ui->table_3->setModel(temprestau.afficher());
 }
 
 void MainWindow::on_Menu_clicked()
@@ -195,4 +201,21 @@ void MainWindow::on_Remove_Restau_clicked()
 {   delete_restaurant delete_restau;
    delete_restau.setModal(true);
     delete_restau.exec();
+}
+
+void MainWindow::on_chercher_clicked()
+{
+    Restaurant r;
+    QString chercher = ui->lineEdit_chercher->text();
+    ui->tableView->setModel((r.chercher(x,chercher)));
+}
+
+void MainWindow::on_radioButton_clicked()
+{
+    x="1";
+}
+
+void MainWindow::on_radioButton_2_clicked()
+{
+    x="2";
 }

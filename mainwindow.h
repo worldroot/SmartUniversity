@@ -7,6 +7,7 @@
 #include "menu.h"
 #include "Smtp.h"
 #include "restaurant.h"
+#include "abonne_restaurant.h"
 
 namespace Ui {
 class MainWindow;
@@ -54,12 +55,20 @@ private slots:
     void mailSent(QString);
     void on_Remove_Restau_clicked();
 
+    void on_chercher_clicked();
+
+    void on_radioButton_clicked();
+
+    void on_radioButton_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlTableModel *model;
     QSqlTableModel *model1;
     Menu tempmenu;
     Restaurant temprestau;
+    Abonne_Restaurant tempabo;
+     QString x="1";
 
 };
 

@@ -29,9 +29,23 @@ bool Abonne_Restaurant::ajouter_Abonne_Restaurant()
     query.bindValue(":FIN", fin);
     query.bindValue(":ID_ETUDIANT", id_etudiant);
     query.bindValue(":ID_RESTO", id_resto);
+    query.bindValue(":TYPE", type);
     if (query.exec()== true)
     {
           return(true);
     }
  return(query.exec());
+}
+
+QSqlQueryModel *Abonne_Restaurant::afficher()
+{
+        QSqlQueryModel * model= new QSqlQueryModel();
+        model->setQuery("select * from abonnement_resto");
+        model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("DEBUT"));
+        model->setHeaderData(2, Qt::Horizontal, QObject::tr("FIN"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("ID_ETUDIANT"));
+          model->setHeaderData(4, Qt::Horizontal, QObject::tr("ID_RESTO"));
+           model->setHeaderData(5, Qt::Horizontal, QObject::tr("TYPE"));
+            return model;
 }

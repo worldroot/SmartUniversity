@@ -19,7 +19,7 @@ public:
     Abonne_Restaurant();
     Abonne_Restaurant(int,QDate,QDate,QString,int,int);
     bool ajouter_Abonne_Restaurant();
-    void afficher_Abonne_Restaurant();
+    QSqlQueryModel * afficher();
     void modifier_Abonne_Restaurant();
     void supprimer_Abonne_Restaurant();
     int get_id();

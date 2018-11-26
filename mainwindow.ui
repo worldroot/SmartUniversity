@@ -217,7 +217,7 @@ background-repeat:none;
 }</string>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page_subscriptions">
      <property name="styleSheet">
@@ -356,7 +356,16 @@ border-image:url(:);
 border: transparent;
 </string>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2"/>
+      <widget class="QTableView" name="tableView_2">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>310</y>
+         <width>731</width>
+         <height>451</height>
+        </rect>
+       </property>
+      </widget>
      </widget>
      <widget class="QPushButton" name="Remove_Subscriptions">
       <property name="geometry">
@@ -539,7 +548,20 @@ border-image:url(:);
 border: transparent;
 </string>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_3"/>
+      <widget class="QTableView" name="table_3">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>320</y>
+         <width>631</width>
+         <height>431</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background:transparent;
+border:transparent;</string>
+       </property>
+      </widget>
      </widget>
      <zorder>Background_restaurants</zorder>
      <zorder>Add_Restau</zorder>
@@ -838,6 +860,100 @@ border: transparent;
 
 }</string>
      </property>
+     <widget class="QRadioButton" name="radioButton">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>90</y>
+        <width>84</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Places</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_2">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>90</y>
+        <width>84</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Employes</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_chercher">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>50</y>
+        <width>201</width>
+        <height>21</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="chercher">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>80</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#Add_menus{
+background:none;
+border:transparent;
+background-repeat:none;
+padding-top: 0px;
+margin-top:0px;
+
+}
+
+#Add_menus:hover{
+background: rgba(204, 204, 204, 0.2);
+
+}
+
+#Add_menus::pressed{
+border-image:url(:);
+}
+
+         
+
+
+
+</string>
+      </property>
+      <property name="text">
+       <string>CHERCHER</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableView">
+      <property name="geometry">
+       <rect>
+        <x>55</x>
+        <y>141</y>
+        <width>471</width>
+        <height>411</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>410</y>
+        <width>256</width>
+        <height>192</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QPushButton" name="SendMail">

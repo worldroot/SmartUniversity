@@ -54,3 +54,17 @@ bool Restaurant::supprimer_Restaurant(int id_supprimer)
     query.bindValue(":id", res);
     return    query.exec();
 }
+
+QSqlQueryModel *Restaurant::chercher(QString a, QString b)
+{
+    QSqlQueryModel * model= new QSqlQueryModel();
+      if (a=="1")
+      {
+          model->setQuery("select * from resto where NB_PLACES='"+b+"' ");
+      }
+      if (a=="2")
+      {
+          model->setQuery("select * from resto where NB_EMPLOYES='"+b+"' ");
+      }
+     return model;
+}

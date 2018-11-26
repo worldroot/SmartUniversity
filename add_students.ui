@@ -133,83 +133,6 @@ QComboBox QAbstractItemView {
     </property>
    </item>
   </widget>
-  <widget class="QComboBox" name="Types_selection">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>240</y>
-     <width>121</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#Types_selection{
-border: 1px ;
-border-radius: 20px;
-
-}
-QComboBox:editable{
-background:  rgba(249, 249, 249, 0.35);
-border:  transparent;
-
-}
-
-QComboBox:!editable, QComboBox::drop-down:editable {
-     background: rgba(249, 249, 249, 0.35);
-}
-
-/* QComboBox gets the &quot;on&quot; state when the popup is open */
-QComboBox:!editable:on, QComboBox::drop-down:editable:on {
-    background: rgba(249, 249, 249, 0.35);
-}
-QComboBox:on { /* shift the text when the popup opens */
-    padding-top: 3px;
-    padding-left: 4px;
-}
-
-QComboBox::drop-down {
-    subcontrol-origin: padding;
-    subcontrol-position: top right;
-    width: 15px;
-
-    border-left-width: 1px;
-    border-left-color: darkgray;
-    border-left-style: solid; /* just a single line */
-    border-top-right-radius: 3px; /* same radius as the QComboBox */
-    border-bottom-right-radius: 3px;
-}
-QComboBox::down-arrow:on { /* shift the arrow when popup is open */
-    top: 1px;
-    left: 1px;
-}
-
-QComboBox QAbstractItemView {
-    border: 2px solid darkgray;
-    selection-background-color: lightgray;
-}
-
-</string>
-   </property>
-   <property name="editable">
-    <bool>false</bool>
-   </property>
-   <property name="currentText">
-    <string>Pension Complete</string>
-   </property>
-   <property name="duplicatesEnabled">
-    <bool>false</bool>
-   </property>
-   <item>
-    <property name="text">
-     <string>Pension Complete</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Demi-Pension</string>
-    </property>
-   </item>
-  </widget>
   <widget class="QPushButton" name="send">
    <property name="geometry">
     <rect>
@@ -368,6 +291,36 @@ background:rgba(46, 204, 113, 0.2);
    <property name="geometry">
     <rect>
      <x>80</x>
+     <y>240</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: #f9f9f9;
+border-radius: 10px;
+color:&quot;dark&quot;
+</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="table">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>160</y>
+     <width>331</width>
+     <height>371</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:transparent;
+border:transparent;</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_type">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
      <y>240</y>
      <width>101</width>
      <height>31</height>

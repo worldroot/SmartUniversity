@@ -11,8 +11,10 @@ add_students::add_students(QWidget *parent) :
     ui->setupUi(this);
     Restaurant res;
     etudiant e;
+    Abonne_Restaurant temp;
     ui->Restau_selection->setModel(res.afficher());
     ui->Etudiant_selection->setModel(e.afficher());
+    ui->table->setModel(temp.afficher());
 }
 
 add_students::~add_students()
@@ -42,7 +44,7 @@ void add_students::on_send_clicked()
 id= ui->lineEdit_id->text().toInt();
 id_resto = ui->Restau_selection->currentText().toInt();
 id_etudiant = ui->Etudiant_selection->currentText().toInt();
-type = ui->Types_selection->currentText();
+type = ui->lineEdit_type->text();
 debut = ui->dateEdit->date();
 fin = ui->dateEdit_2->date();
 Abonne_Restaurant abon(id,debut,fin,type,id_resto,id_etudiant);
