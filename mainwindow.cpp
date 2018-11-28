@@ -176,7 +176,7 @@ void MainWindow::on_Update_menu_clicked()
         QMessageBox::information(nullptr, QObject::tr(" menu mis a jour"),
                         QObject::tr("Menu mis a jour.\n"));
       }
-   #
+
 
 }
 
@@ -184,17 +184,23 @@ void MainWindow::on_Update_menu_clicked()
 
 void MainWindow::on_SendMail_clicked()
 {
+
     Smtp* smtp = new Smtp("mehdi.behira@esprit.tn", "esprit2017", "smtp.gmail.com",465);
      connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
 
      smtp->sendMail("mehdi.behira@esprit.tn", "mehdibehira@gmail.com" , "This is a subject","This is a body");
+      // smtp->deleteLater();
+
 }
 
 
 void MainWindow::mailSent(QString status)
 {
     if(status == "Message sent")
-        QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+        QMessageBox::warning( nullptr, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+
+
+
 }
 
 void MainWindow::on_Remove_Restau_clicked()
@@ -207,7 +213,9 @@ void MainWindow::on_chercher_clicked()
 {
     Restaurant r;
     QString chercher = ui->lineEdit_chercher->text();
-    ui->tableView->setModel((r.chercher(x,chercher)));
+   // ui->tableView->setModel((r.chercher_2(x,chercher)));
+
+    //ui->tableView->setModel(r.chercher_2(x,chercher));
 }
 
 void MainWindow::on_radioButton_clicked()
@@ -218,4 +226,41 @@ void MainWindow::on_radioButton_clicked()
 void MainWindow::on_radioButton_2_clicked()
 {
     x="2";
+}
+
+void MainWindow::on_lineEdit_chercher_textChanged(const QString &arg1)
+{
+    Restaurant r;
+    QString chercher = ui->lineEdit_chercher->text();
+    ui->tableView->setModel((r.chercher(x,chercher)));
+}
+
+
+
+void MainWindow::on_radioButton_3_clicked()
+{
+     x="3";
+}
+
+void MainWindow::on_Update_Restau_clicked()
+{
+    QString id,places,menu,employes;
+    id = ui->lineEdit_id->text();
+    places = ui->lineEdit_places->text();
+    menu = ui->lineEdit_menu->text();
+    employes = ui->lineEdit_employes->text();
+
+
+
+
+    Restaurant r;
+    r.modifier_Restaurant(id,places,menu,employes);
+
+   // QSqlQuery qry;
+   //qry.prepare("update menus set NOM='"+nom+"',DESCRIPTION='"+description+"',ID='"+id+"' where id='"+id+"' ");
+    if(r.modifier_Restaurant(id,places,menu,employes))
+      {
+        QMessageBox::information(nullptr, QObject::tr(" Restaurant mis a jour"),
+                        QObject::tr("Restaurant mis a jour.\n"));
+      }
 }

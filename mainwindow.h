@@ -61,6 +61,12 @@ private slots:
 
     void on_radioButton_2_clicked();
 
+    void on_lineEdit_chercher_textChanged(const QString &arg1);
+
+    void on_radioButton_3_clicked();
+
+    void on_Update_Restau_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlTableModel *model;
@@ -69,7 +75,7 @@ private:
     Restaurant temprestau;
     Abonne_Restaurant tempabo;
      QString x="1";
-
+          Smtp* smtp;
 };
 
 #endif // MAINWINDOW_H

@@ -217,7 +217,7 @@ background-repeat:none;
 }</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page_subscriptions">
      <property name="styleSheet">
@@ -420,49 +420,11 @@ border: transparent;
 
 }</string>
      </property>
-     <widget class="QPushButton" name="Add_Restau">
-      <property name="geometry">
-       <rect>
-        <x>220</x>
-        <y>30</y>
-        <width>171</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">#Add_Restau{
-background:none;
-border:transparent;
-background-repeat:none;
-padding-top: 0px;
-margin-top:0px;
-
-}
-
-#Add_Restau:hover{
-background: rgba(204, 204, 204, 0.2);
-
-}
-
-#Add_Restau::pressed{
-border-image:url(:);
-}
-
-         
-
-
-
-</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QPushButton" name="Remove_Restau">
       <property name="geometry">
        <rect>
         <x>390</x>
-        <y>30</y>
+        <y>40</y>
         <width>181</width>
         <height>41</height>
        </rect>
@@ -500,7 +462,7 @@ border-image:url(:);
       <property name="geometry">
        <rect>
         <x>570</x>
-        <y>30</y>
+        <y>40</y>
         <width>181</width>
         <height>41</height>
        </rect>
@@ -562,9 +524,176 @@ border: transparent;
 border:transparent;</string>
        </property>
       </widget>
+      <widget class="QLineEdit" name="lineEdit_menu">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>710</y>
+         <width>113</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_employes">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>680</y>
+         <width>113</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_places">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>650</y>
+         <width>113</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_id">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>620</y>
+         <width>113</width>
+         <height>21</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Add_Restau">
+       <property name="geometry">
+        <rect>
+         <x>260</x>
+         <y>228</y>
+         <width>171</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#Add_Restau{
+background:none;
+border:transparent;
+background-repeat:none;
+padding-top: 0px;
+margin-top:0px;
+
+}
+
+#Add_Restau:hover{
+background: rgba(204, 204, 204, 0.2);
+
+}
+
+#Add_Restau::pressed{
+border-image:url(:);
+}
+
+         
+
+
+
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_4">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>620</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>id</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_5">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>660</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>places</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_6">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>690</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>employes</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>720</y>
+         <width>47</width>
+         <height>13</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>id_menu</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="Update_Restau">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>660</y>
+         <width>131</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#Update_Restau{
+background:none;
+border:transparent;
+background-repeat:none;
+padding-top: 0px;
+margin-top:0px;
+
+}
+
+#Update_Restau:hover{
+background: rgba(204, 204, 204, 0.2);
+
+}
+
+#Add_Restau::pressed{
+border-image:url(:);
+}
+
+         
+
+
+
+</string>
+       </property>
+       <property name="text">
+        <string>UPDATE</string>
+       </property>
+      </widget>
      </widget>
      <zorder>Background_restaurants</zorder>
-     <zorder>Add_Restau</zorder>
      <zorder>Remove_Restau</zorder>
      <zorder>Refresh_Restau</zorder>
     </widget>
@@ -952,6 +1081,19 @@ border-image:url(:);
         <width>256</width>
         <height>192</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_3">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>90</y>
+        <width>84</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>resto</string>
       </property>
      </widget>
     </widget>

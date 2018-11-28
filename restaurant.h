@@ -16,7 +16,7 @@ public:
     Restaurant(int,int,int,int);
     bool ajouter_Restaurant();
     bool supprimer_Restaurant(int id_supprimer);
-    void modifier_Restaurant(int id);
+    bool modifier_Restaurant(QString,QString,QString,QString);
     void consulter_Restaurant(int id);
     QSqlQueryModel * afficher();
     QSqlQueryModel * chercher(QString,QString);

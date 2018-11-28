@@ -45,7 +45,7 @@ void Smtp::sendMail(const QString &from, const QString &to, const QString &subje
     this->from = from;
     rcpt = to;
     state = Init;
-    socket->connectToHostEncrypted(host, port); //"smtp.gmail.com" and 465 for gmail TLS
+    socket->connectToHostEncrypted("smtp.gmail.com", 465); //"smtp.gmail.com" and 465 for gmail TLS
     if (!socket->waitForConnected(timeout)) {
          qDebug() << socket->errorString();
      }
@@ -212,7 +212,7 @@ void Smtp::readyRead()
     else
     {
         // something broke.
-        QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Unexpected reply from SMTP server:\n\n" ) + response );
+        QMessageBox::warning( nullptr, tr( "Qt Simple SMTP client" ), tr( "Unexpected reply from SMTP server:\n\n" ) + response );
         state = Close;
         emit status( tr( "Failed to send message" ) );
     }

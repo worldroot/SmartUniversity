@@ -42,7 +42,7 @@ QSqlQueryModel *Restaurant::afficher()
         model->setHeaderData(0, Qt::Horizontal,QObject::tr("ID"));
         model->setHeaderData(1, Qt::Horizontal, QObject::tr("NB_PLACES"));
         model->setHeaderData(2, Qt::Horizontal, QObject::tr("NB_EMPLOYES"));
-        model->setHeaderData(2, Qt::Horizontal, QObject::tr("ID_MENU"));
+        model->setHeaderData(3, Qt::Horizontal, QObject::tr("ID_MENU"));
             return model;
 }
 
@@ -66,5 +66,25 @@ QSqlQueryModel *Restaurant::chercher(QString a, QString b)
       {
           model->setQuery("select * from resto where NB_EMPLOYES='"+b+"' ");
       }
+      if(a=="3")
+      {
+         model->setQuery("select * FROM abonnement_resto INNER JOIN resto ON abonnement_resto.id_resto = '"+b+"' ");
+      }
+
      return model;
+}
+
+
+bool Restaurant::modifier_Restaurant(QString a,QString b,QString c,QString d)
+{
+    QSqlQuery qry;
+    qry.prepare("update resto set ID= :id,NB_PLACES= :places,NB_EMPLOYES= :employes, ID_MENU= :menu where id= :id ");
+    qry.bindValue(":id",a );
+    qry.bindValue(":places",b );
+    qry.bindValue(":menu",c );
+     qry.bindValue(":employes",d );
+
+   return qry.exec();
+
+
 }
