@@ -21,7 +21,7 @@ public:
     bool ajouter_Abonne_Restaurant();
     QSqlQueryModel * afficher();
     void modifier_Abonne_Restaurant();
-    void supprimer_Abonne_Restaurant();
+    bool supprimer_Abonnement_Restaurant(int);
     int get_id();
     QDate get_debut();
     QDate get_fin();

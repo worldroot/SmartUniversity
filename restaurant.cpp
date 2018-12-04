@@ -88,3 +88,14 @@ bool Restaurant::modifier_Restaurant(QString a,QString b,QString c,QString d)
 
 
 }
+
+
+ QSqlTableModel *Restaurant::tri(int num)
+ {
+     QSqlTableModel *model = new QSqlTableModel();
+     model->setTable("resto");
+     model->setSort(num,Qt::DescendingOrder);
+     model->select();
+     return model;
+
+ }

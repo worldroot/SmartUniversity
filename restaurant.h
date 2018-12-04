@@ -2,7 +2,7 @@
 #define RESTAURANT_H
 #include <QSqlQuery>
 #include <QSqlQueryModel>
-
+#include <QSqlTableModel>
 class Restaurant
 {
 private:
@@ -20,6 +20,7 @@ public:
     void consulter_Restaurant(int id);
     QSqlQueryModel * afficher();
     QSqlQueryModel * chercher(QString,QString);
+    QSqlTableModel *tri(int num);
     int get_id();
     int get_nb_places();
     int get_nb_employes();

@@ -22,7 +22,7 @@
 #include "Smtp.h"
 #include "delete_restaurant.h"
 #include "restaurant.h"
-
+#include "delete_abonnement_resto.h"
 #define q2c(string) string.toStdString()
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -33,6 +33,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     ui->table->setModel(tempmenu.afficher());
 
+    m_horiz_header = ui->table_3->horizontalHeader();
+    connect(m_horiz_header,SIGNAL(sectionClicked(int)),this,SLOT(on_pushButton_2_clicked()));
 
 }
 
@@ -88,6 +90,7 @@ void MainWindow::on_Restaurants_clicked()
 {
     ui->mini_menu->setCurrentIndex(1);
      ui->table_3->setModel(temprestau.afficher());
+
 }
 
 void MainWindow::on_Menu_clicked()
@@ -196,8 +199,8 @@ void MainWindow::on_SendMail_clicked()
 
 void MainWindow::mailSent(QString status)
 {
-    if(status == "Message sent")
-        QMessageBox::warning( nullptr, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+  //  if(status == "Message sent")
+    //    QMessageBox::warning( nullptr, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
 
 
 
@@ -207,6 +210,7 @@ void MainWindow::on_Remove_Restau_clicked()
 {   delete_restaurant delete_restau;
    delete_restau.setModal(true);
     delete_restau.exec();
+
 }
 
 void MainWindow::on_chercher_clicked()
@@ -250,9 +254,6 @@ void MainWindow::on_Update_Restau_clicked()
     menu = ui->lineEdit_menu->text();
     employes = ui->lineEdit_employes->text();
 
-
-
-
     Restaurant r;
     r.modifier_Restaurant(id,places,menu,employes);
 
@@ -263,4 +264,21 @@ void MainWindow::on_Update_Restau_clicked()
         QMessageBox::information(nullptr, QObject::tr(" Restaurant mis a jour"),
                         QObject::tr("Restaurant mis a jour.\n"));
       }
+
+     Smtp* smtp = new Smtp("mehdi.behira@esprit.tn", "esprit2017", "smtp.gmail.com",465);
+     connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+     smtp->sendMail("mehdi.behira@esprit.tn", "mehdibehira@gmail.com" , "Mis a jour","RESTO id "+id+"\n NBR DE PALCES  "+places+" \n NBR EMPLOYER "+employes+"");
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    Restaurant r;
+    ui->table_3->setModel(r.tri(ui->table_3->currentIndex().column()));
+}
+
+void MainWindow::on_Remove_Subscriptions_clicked()
+{
+    Delete_abonnement_resto delete_abo;
+    delete_abo.setModal(true);
+    delete_abo.exec();
 }

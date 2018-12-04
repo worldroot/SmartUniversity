@@ -29,5 +29,7 @@
         <file>create_restauant_v4.png</file>
         <file>delete_restaurant_v2.png</file>
         <file>create_subscriptions.png</file>
+        <file>alerte.png</file>
+        <file>delete_SUB_v2.png</file>
     </qresource>
 </RCC>

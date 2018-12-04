@@ -8,6 +8,7 @@
 #include "Smtp.h"
 #include "restaurant.h"
 #include "abonne_restaurant.h"
+#include <QTableView>
 
 namespace Ui {
 class MainWindow;
@@ -67,6 +68,10 @@ private slots:
 
     void on_Update_Restau_clicked();
 
+    void on_pushButton_2_clicked();
+
+    void on_Remove_Subscriptions_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlTableModel *model;
@@ -76,6 +81,8 @@ private:
     Abonne_Restaurant tempabo;
      QString x="1";
           Smtp* smtp;
+     QHeaderView *m_horiz_header;
+
 };
 
 #endif // MAINWINDOW_H

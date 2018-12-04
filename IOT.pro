@@ -52,7 +52,8 @@ SOURCES += \
     formulaire_supprimer_menu.cpp \
     Smtp.cpp \
     delete_restaurant.cpp \
-    etudiant.cpp
+    etudiant.cpp \
+    delete_abonnement_resto.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -67,7 +68,8 @@ HEADERS += \
     formulaire_supprimer_menu.h \
     Smtp.h \
     delete_restaurant.h \
-    etudiant.h
+    etudiant.h \
+    delete_abonnement_resto.h
 
 FORMS += \
         mainwindow.ui \
@@ -76,7 +78,8 @@ FORMS += \
     add_types_subscriptions.ui \
     formulaire_ajout_menu.ui \
     formulaire_supprimer_menu.ui \
-    delete_restaurant.ui
+    delete_restaurant.ui \
+    delete_abonnement_resto.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

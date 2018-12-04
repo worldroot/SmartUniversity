@@ -49,3 +49,13 @@ QSqlQueryModel *Abonne_Restaurant::afficher()
            model->setHeaderData(5, Qt::Horizontal, QObject::tr("TYPE"));
             return model;
 }
+
+
+bool Abonne_Restaurant::supprimer_Abonnement_Restaurant(int id_supprimer)
+{
+    QSqlQuery query;
+    QString res= QString::number(id_supprimer);
+    query.prepare("Delete from abonnement_resto where ID = :id ");
+    query.bindValue(":id", res);
+    return    query.exec();
+}

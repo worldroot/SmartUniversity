@@ -333,6 +333,20 @@ color:&quot;dark&quot;
 </string>
    </property>
   </widget>
+  <widget class="QFrame" name="alerte">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>190</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image:url(:/alerte.png);</string>
+   </property>
+   <layout class="QFormLayout" name="formLayout"/>
+  </widget>
  </widget>
  <resources/>
  <connections/>
