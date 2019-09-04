@@ -1,2 +1,2 @@
 # SmartUniversity
-an iot smart application fur university
+an iot smart application for university
